@@ -1,9 +1,6 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
+  width: 100%;
   text-align: center;
   background: #000000;
   color: #ffffff;
@@ -32,7 +29,7 @@
 .global_loader_container {
   position: absolute;
   z-index: 1;
-  top: -45px;
+  top: -35px;
   height: 0;
   left: 0;
   right: 0;
@@ -178,9 +175,10 @@
 .li {
   list-style: none;
   color: #484848;
-  font-size: 3em;
+  font-size: 1.5em;
+  /* font-size: 3em; */
   font-family: cursive;
-  letter-spacing: 20px;
+  letter-spacing: 10px;
   animation: letter-glow 0.7s 0s ease both;
 }
 
@@ -274,4 +272,139 @@
     transform: scale(1.5);
 
   }
+}
+
+@keyframes disappear-backward {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+.disappear {
+  animation: disappear-backward 0.5s forwards;
+}
+
+.ul li.disappear {
+  animation: disappear-backward 0.5s forwards;
+}
+
+.ul li.disappear:nth-child(1) {
+  animation-delay: 1.5s;
+}
+
+.ul li.disappear:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.ul li.disappear:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.ul li.disappear:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.ul li.disappear:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.ul li.disappear:nth-child(6) {
+  animation-delay: 0s;
+}
+
+.ul li.disappear:nth-child(7) {
+  animation-delay: 0.3s;
+}
+
+.ul li.disappear:nth-child(8) {
+  animation-delay: 0.6s;
+}
+
+.ul li.disappear:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.ul li.disappear:nth-child(10) {
+  animation-delay: 1.2s;
+}
+
+.ul li.disappear:nth-child(11) {
+  animation-delay: 1.5s;
+}
+
+.signature {
+  stroke-dasharray: 2745;
+  stroke-dashoffset: 2745;
+  animation: sign 8s ease forwards;
+}
+
+@keyframes sign {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.signature2 {
+  stroke-dasharray: 3778;
+  stroke-dashoffset: 3778;
+  animation: sign2 8s ease forwards;
+}
+
+@keyframes sign2 {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify_content_center {
+  justify-content: center;
+}
+
+.width_height {
+  height: fit-content;
+  width: fit-content;
+}
+
+.padding {
+  padding: 2rem;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  margin-bottom: 10px;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: rgb(77, 74, 74);
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.navItem a:hover {
+  color: #cccccc; 
+}
+
+.brandNameNavigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 85vh;
+
 }
