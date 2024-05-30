@@ -384,6 +384,9 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navItem {
@@ -402,9 +405,42 @@
 }
 
 .brandNameNavigation {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  justify-content: space-between;
-  height: 85vh;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
 
+.bottomNav {
+  position: absolute;
+  bottom: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+}
+
+.container {
+  text-align: center;
+}
+
+.blur_text {
+  font-size: 48px;
+  filter: blur(3px);
+  animation: unblur 3s ease-in-out forwards;
+}
+
+@keyframes unblur {
+  0% {
+      filter: blur(3px);
+  }
+  100% {
+      filter: blur(0);
+  }
 }
