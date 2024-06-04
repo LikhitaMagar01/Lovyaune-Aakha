@@ -563,3 +563,40 @@
   bottom: 0;
   right: 0;
 }
+
+.scrollWrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+.scrollButtons {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.scrollButton {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.scrollButton:hover {
+  background-color: #ddd;
+}
+
+.element {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+.element::-webkit-scrollbar {
+  display: none;
+}
