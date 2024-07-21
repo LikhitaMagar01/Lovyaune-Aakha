@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function Home() {
   const [curtainVisible, setCurtainVisible] = useState(true);
-  const [remove, setRemove] = useState(true);
+  const [remove, setRemove] = useState(false);
   const [disappear, setDisappear] = useState(false);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setRemove(false)
+      setRemove(true)
     }, 6000);
     return () => clearTimeout(timer);
   }, []);
@@ -55,7 +55,7 @@ export default function Home() {
         </>
       )}
       <main className={styles.main}>
-        {remove && (
+        {!remove && (
           <>
             <div className={`${styles.position_rainbow} ${disappear ? styles.disappear : ''}`}>
               <div className={styles.app_loader}>
@@ -83,7 +83,7 @@ export default function Home() {
             </ul>
           </>
         )}
-        {!remove && (
+        {remove && (
           <>
             <div className={styles.brandNameNavigation}>
               <div className={styles.container}>
@@ -117,7 +117,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className={`flex flex-center pr-5 flex-wrap justify-center p-2 ${styles.fixed_bottom}`}>
-                <svg className={styles.width_height} width="373" height="240" viewBox="0 0 373 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={`text-white ${styles.width_height}`} width="30" height="30" viewBox="0 0 373 240" xmlns="http://www.w3.org/2000/svg">
                   <path className={styles.signature2} d="M173.237 122.823C179.014 102.373 224.315 -3.23633 166.095 16.1703C139.13 25.1584 120.172 54.94 108.801 79.3368C97.43 103.732 92.6732 130.809 79.9154 154.565C71.9603 169.378 58.4854 194.772 38.9683 196.941C26.4994 198.326 15.3596 194.461 13.8921 180.276C11.5276 157.419 22.9162 138.934 43.2534 129.013C96.8307 102.878 101.46 194.322 144.669 202.178C187.74 210.009 220.423 169.618 241.482 138.377C255.92 116.958 333.764 -7.32144 355.594 70.449C369.881 121.345 344.643 173.044 344.643 223.763C344.643 235.439 340.305 200.681 336.073 189.799C321.873 153.283 300.488 139.118 264.654 125.68" stroke="white" strokeWidth="26" strokeLinecap="round" />
                 </svg>
               </div>
