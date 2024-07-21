@@ -110,7 +110,7 @@ export default function Home() {
               </div>
               <div className={styles.bottomNav}>
                 <ul className={styles.navList}>
-                  <li className={styles.navItem}><Link href="/our-works">Our Works</Link></li>
+                  <li className={styles.navItem}><Link href="/works">Our Works</Link></li>
                   <li className={styles.navItem}><Link href="/designs">Designs</Link></li>
                   <li className={styles.navItem}><Link href="/products">Products</Link></li>
                   <li className={styles.navItem}><Link href="/about">About Us</Link></li>
