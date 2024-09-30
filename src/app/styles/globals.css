@@ -47,3 +47,12 @@ body {
     transform: translateY(100%);
   }
 }
+
+/* Add to global.css or tailwind.config.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
