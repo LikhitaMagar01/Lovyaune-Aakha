@@ -86,7 +86,7 @@ const Works = () => {
       <h1 className="text-4xl font-bold text-center my-8 text-white">Our Works</h1>
       <div
         ref={scrollRef}
-        className="h-[calc(100vh-4rem)] overflow-y-auto scrollbar-hide"
+        className="h-[calc(90vh-4rem)] overflow-y-auto scrollbar-hide"
       >
         <div className="flex flex-wrap justify-center gap-4 p-4">
           {works.map((work) => (
@@ -101,7 +101,7 @@ const Works = () => {
           ))}
         </div>
       </div>
-      <div className="fixed bottom-4 left-4 flex flex-col space-y-2">
+      <div className="fixed bottom-4 left-4 flex space-x-2 gap-4">
         <button
           onClick={() => scroll('up')}
           className="bg-white p-2 rounded-full shadow-lg hover:bg-gray-100"
